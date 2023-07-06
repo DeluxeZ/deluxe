@@ -5,9 +5,12 @@ import {observer} from 'mobx-react';
 export class TimerView extends React.Component {
     render() {
         return (
-            <button onClick={this.onReset.bind(this)}>
-                Seconds passed: {this.props.appState.timer}
-            </button>
+            <div>
+                <button onClick={this.onReset.bind(this)}>
+                    Seconds passed: {this.props.appState.timer}
+                </button>
+                <div>{this.props.timer}</div>
+            </div>
         );
     }
     onReset() {
